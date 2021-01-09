@@ -16,5 +16,6 @@ dependencies:
   - pip
   
   - pip:
+      - -e .
       - ipypb
       - feautils
