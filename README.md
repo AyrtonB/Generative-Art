@@ -4,6 +4,6 @@
 
 <br>
 
-### 01 - Solar System
+### Solar System
 
 <img src="img/solar-system/example.png" width="500"/>
