@@ -10,7 +10,7 @@ index = {"vis_graphic": "01-solar-system.ipynb",
          "draw_sun": "01-solar-system.ipynb",
          "draw_orbit": "01-solar-system.ipynb",
          "draw_line": "01-solar-system.ipynb",
-         "get_planet_size_center_colour": "01-solar-system.ipynb",
+         "get_planet_size_center": "01-solar-system.ipynb",
          "draw_planets": "01-solar-system.ipynb",
          "draw_border": "01-solar-system.ipynb",
          "add_noise": "01-solar-system.ipynb"}
