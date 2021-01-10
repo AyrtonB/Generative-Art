@@ -7,3 +7,9 @@
 ### Solar System
 
 <img src="img/solar-system/example.png" width="500"/>
+
+<br>
+
+### Scenery Dithering
+
+<img src="img/scenery/example.jpg" width="500"/>
