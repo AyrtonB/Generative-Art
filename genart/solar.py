@@ -122,8 +122,10 @@ def add_noise(svgio, dpi=250, global_noise=0.1):
 def draw_solar_system(width=500, height=300, border_size=10,
                       sun_size=50, distance_between_planets=3,
                       min_planet_size=3, max_planet_size=10,
-                      planet_path='orbit', bkg_r=0.3, bkg_g=0.3, bkg_b=0.3,
+                      bdr_r=243/255, bdr_g=156/255, bdr_b=18/255,
+                      bkg_r=0.3, bkg_g=0.3, bkg_b=0.3, planet_path='orbit',
                       noisen_image=True, dpi=250, global_noise=0.1):
+
     draw_ops = [
         (svg.draw_background, {
             'width': width,
@@ -151,7 +153,10 @@ def draw_solar_system(width=500, height=300, border_size=10,
         (svg.draw_border, {
             'width': width,
             'height': height,
-            'border_size': border_size
+            'border_size': border_size,
+            'bdr_r': bdr_r,
+            'bdr_g': bdr_g,
+            'bdr_b': bdr_b
         })
     ]
 

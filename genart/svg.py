@@ -27,13 +27,13 @@ def draw_img(draw_ops, width=500, height=300):
     return svgio
 
 # Cell
-def vis_graphic(img):
+def vis_graphic(img, **vis_kwargs):
     img_type_to_display = {
         PngImageFile: display,
-        BytesIO: lambda img: IPython.display.SVG(data=img.getvalue())
+        BytesIO: lambda img, **vis_kwargs: IPython.display.SVG(data=img.getvalue(), **vis_kwargs)
     }
 
-    return img_type_to_display[type(img)](img)
+    return img_type_to_display[type(img)](img, **vis_kwargs)
 
 # Cell
 def draw_background(context, width, height, bkg_r=.3, bkg_g=.3, bkg_b=.3):
@@ -42,8 +42,8 @@ def draw_background(context, width, height, bkg_r=.3, bkg_g=.3, bkg_b=.3):
     context.fill()
 
 # Cell
-def draw_border(context, border_size, width, height, bkg_r=243/255, bkg_g=156/255, bkg_b=18/255):
-    context.set_source_rgb(bkg_r, bkg_g, bkg_b)
+def draw_border(context, border_size, width, height, bdr_r=243/255, bdr_g=156/255, bdr_b=18/255):
+    context.set_source_rgb(bdr_r, bdr_g, bdr_b)
     context.rectangle(0, 0, border_size, height)
     context.rectangle(0, 0, width, border_size)
     context.rectangle(0, height-border_size, width, border_size)
