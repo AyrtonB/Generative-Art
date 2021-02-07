@@ -13,3 +13,9 @@
 ### Scenery Dithering
 
 <img src="img/scenery/example.jpg" width="500"/>
+
+<br>
+
+### Perlin Island Chains
+
+<img src="img/islands/9-set.png" width="500"/>

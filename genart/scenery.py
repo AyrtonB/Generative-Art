@@ -69,8 +69,11 @@ def process_img(img_fp, num_rows=64, num_cols=64, min_threshold_frac=0.25, max_t
     return img_neg
 
 # Cell
-def draw_scenery_dither(width=500, height=500,
-                        bkg_r=0.3, bkg_g=0.3, bkg_b=0.3):
+def draw_scenery_dither(img_fp, width=250, height=250,
+                        dot_size_factor=1.8, border_size=2,
+                        bkg_r=246/255, bkg_g=0/255, bkg_b=20/255):
+
+    img = process_img(img_fp)
 
     draw_ops = [
         (svg.draw_background, {
@@ -79,6 +82,12 @@ def draw_scenery_dither(width=500, height=500,
             'bkg_r': bkg_r,
             'bkg_g': bkg_g,
             'bkg_b': bkg_b
+        }),
+        (draw_dots, {
+            'img_arr': img,
+            'img_width': width,
+            'img_height': height,
+            'dot_size_factor': dot_size_factor
         })
     ]
 

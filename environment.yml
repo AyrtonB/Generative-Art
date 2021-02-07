@@ -13,9 +13,11 @@ dependencies:
   - nbdev
   - pycairo
   - cairosvg
+  - ipycanvas
   - pip
   
   - pip:
       - -e .
       - ipypb
       - feautils
+      - noise
