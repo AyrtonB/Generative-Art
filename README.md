@@ -18,4 +18,4 @@
 
 ### Perlin Island Chains
 
-<img src="img/islands/9-set.png" width="500"/>
+<img src="img/islands/9-set-6.png" width="500"/>
